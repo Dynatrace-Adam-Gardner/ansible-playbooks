@@ -1,0 +1,16 @@
+---
+- name: Create Ansible Control Machines
+  hosts: control-machines
+  become: yes
+
+  roles:
+
+  - geerlingguy.ansible
+
+  # Copy SSH Key to remote control machines
+  post_tasks:
+
+  - name: Copy SSH Key to remote machines
+    copy:
+      src: ~/Documents/sshkeys/trainingkey.pem
+      dest: /tmp
