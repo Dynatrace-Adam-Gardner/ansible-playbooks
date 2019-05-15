@@ -1,7 +1,7 @@
 ---
-name: Ping All Hosts
-hosts: all
-gather_facts: false
+- name: Ping All Hosts
+  hosts: all
+  gather_facts: no
 
-tasks:
-- ping:
+  tasks:
+    - ping:
