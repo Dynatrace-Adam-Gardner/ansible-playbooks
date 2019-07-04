@@ -1,6 +1,6 @@
 ---
 - name: Clear Disk Space
-  hosts: OneAgentTargets
+  hosts: all
   gather_facts: no
 
   tasks:
