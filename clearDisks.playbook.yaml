@@ -1,0 +1,22 @@
+---
+- name: Clear Disk Space
+  hosts: OneAgentTargets
+  gather_facts: no
+
+  tasks:
+
+  # Find all log files in /tmp over 1MB
+  - name: Find all Log Files in /tmp
+    find:
+      paths: /tmp
+      patterns: "*.log"
+      size: 1m
+    register: filesToDelete
+
+  - name: Clear /tmp Directory
+    become: yes
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items:
+      - "{{ filesToDelete.files }}"
