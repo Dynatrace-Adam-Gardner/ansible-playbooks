@@ -20,3 +20,7 @@
       state: absent
     with_items:
       - "{{ filesToDelete.files }}"
+      
+  - name: Print PID
+    debug:
+      msg: "{{ lookup('env', 'pid') }}"
