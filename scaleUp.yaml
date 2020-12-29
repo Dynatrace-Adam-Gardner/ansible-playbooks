@@ -4,4 +4,4 @@
   
   tasks:
     - name: Scale Deployment Up
-    command: kubectl scale deployment logger-deployment -n logdemo --replicas=2
+      command: kubectl scale deployment logger-deployment -n logdemo --replicas=2
