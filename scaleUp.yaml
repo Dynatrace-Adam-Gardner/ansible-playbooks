@@ -3,11 +3,5 @@
   hosts: all
   
   tasks:
-
-  - name: Scale Deployment
-    community.kubernetes.k8s_scale:
-      api_version: v1
-      kind: Deployment
-      name: logger-deployment
-      namespace: logdemo
-      replicas: 1
+    - name: Scale Deployment Up
+    command: kubectl scale deployment logger-deployment -n logdemo --replicas=2
