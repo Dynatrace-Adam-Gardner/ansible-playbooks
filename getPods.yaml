@@ -1,0 +1,7 @@
+---
+- name: Get Pods
+  hosts: all
+  
+  tasks:
+    - name: Get Pods from All Namespaces
+      command: kubectl get pods -A
