@@ -1,0 +1,7 @@
+---
+- name: Echo Test
+  hosts: all
+
+  tasks:
+    - name: Print Echo Message
+      debug: msg="Hello, world"
