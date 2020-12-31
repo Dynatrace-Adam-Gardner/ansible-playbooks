@@ -1,6 +1,7 @@
 ---
 - name: Send DT Event
   hosts: all
+  gather_facts: no
 
   tasks:
   - name: Send DT Event
