@@ -8,3 +8,6 @@
       
     - name: Print Foo
       debug: msg="Foo is {{ foo }}"
+      
+    - name: Print dt-env-url
+      debug: msg="{{ dt-env-url }}"
