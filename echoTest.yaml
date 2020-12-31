@@ -9,8 +9,8 @@
     - name: Print Foo
       debug: msg="Foo is {{ foo }}"
 
-    - name: Print foobar
-      debug: msg="foo-bar is {{ foo-bar }}"
+    - name: Print foo_bar
+      debug: msg="foo_bar is {{ foo_bar }}"
       
     - name: Print something
-      debug: msg="{{ dt-env-url }}"
+      debug: msg="{{ dt_env_url }}"
