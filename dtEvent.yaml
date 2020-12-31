@@ -10,4 +10,4 @@
       name: dtpushevent
       image: dynatraceacm/push-event:0.1.0
       env:
-          dict: {{ my_dict }}
+          dict: "{{ my_dict }}"
