@@ -1,0 +1,19 @@
+---
+- name: Send DT Event
+  hosts: all
+
+  tasks:
+  - name: Send DT Event
+    docker_container:
+      state: started
+      name: dtpushevent
+      image: dynatraceacm/push-event:0.1.0
+      env:
+        DYNATRACE_BASE_URL={{ dt-env-url }}
+        DYNATRACE_API_TOKEN={{ dt-api-token }}
+        EVENT_TYPE={{ event-type }}
+        SOURCE={{ event-source }}
+        DESCRIPTION={{ event-description }}
+        CONFIGURATION={{ event-new-configuration}}
+        ORIGINAL_CONFIGURATION={{ event-original-configuration }}
+        TAG_RULE={{ tag-rule }}
