@@ -9,7 +9,7 @@
     - name: Print Foo
       debug: msg="Foo is {{ foo }}"
 
-    - name: Print foo-bar
+    - name: Print foobar
       debug: msg="foo-bar is {{ foo-bar }}"
       
     - name: Print something
