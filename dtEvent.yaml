@@ -4,6 +4,9 @@
   gather_facts: no
 
   tasks:
+  - name: Get pip3 version
+    command: pip3 --version
+    
   - name: Run docker ps
     command: docker ps
     
