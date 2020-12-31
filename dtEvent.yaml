@@ -4,6 +4,9 @@
   gather_facts: no
 
   tasks:
+  - name: Run docker ps
+    command: docker ps
+    
   - name: Send DT Event
     docker_container:
       state: started
