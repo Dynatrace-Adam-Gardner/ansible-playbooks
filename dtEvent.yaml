@@ -10,10 +10,10 @@
       name: dtpushevent
       image: dynatraceacm/push-event:0.1.0
       env:
-          DYNATRACE_BASE_URL={{ dt_env_url }}
-          DYNATRACE_API_TOKEN={{ dt_api_token }}
-          EVENT_TYPE={{ event_type }}
-          SOURCE={{ event_source }}
-          DESCRIPTION={{ event_description }}
-          CONFIGURATION={{ event_new_configuration}}
-          ORIGINAL_CONFIGURATION={{ event_original_configuration }}
+        - DYNATRACE_BASE_URL={{ dt_env_url }}
+        - DYNATRACE_API_TOKEN={{ dt_api_token }}
+        - EVENT_TYPE={{ event_type }}
+        - SOURCE={{ event_source }}
+        - DESCRIPTION={{ event_description }}
+        - CONFIGURATION={{ event_new_configuration}}
+        - ORIGINAL_CONFIGURATION={{ event_original_configuration }}
