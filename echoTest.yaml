@@ -5,3 +5,6 @@
   tasks:
     - name: Print Echo Message
       debug: msg="Hello, world"
+      
+    - name: Print Foo
+      debug: msg="Foo is {{ foo }}"
